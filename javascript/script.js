@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var $audio = $("#bg-audio");
     var $button = $("#sound-toggle");
-    $audio[0].volume = 0.3;
+    $audio[0].volume = 0.1;
 
     function toggleSound() {
         if ($audio[0].paused) {
