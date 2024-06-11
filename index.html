@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>TH輸了...</title>
+    <script src="clock.js"></script>
+</head>
+<body style="overflow: auto;">
+    <div id="loading-overlay">
+        <div id="loading-animation"></div>
+        <div id="click-to-start">click anywhere to start</div>
+      </div>
+     
+    <div id="clock" class="clock"></div>
+    <audio id="audio" src="audio/ba.mp3"></audio>
+    <div class="video-background">
+        <video autoplay loop id="bg-video">
+            <source src="video/background.mp4" type="video/mp4">
+            您的瀏覽器不支援HTML5影片
+        </video>
+    </div>  
+    <div class="content">
+        <header>
+            <h1>嗨我是謝博丞:D</h1>
+            <p></p>
+        </header>
+        <img src="images/head.png" class="about-me-avatar" alt="Avatar" onclick="on()">
+            <div class="dialog-box hidden" id="dialog">
+                <h2>老師可以在這裡</h2>
+                <h2>查看各種資料</h2>
+            </div>
+        <section id="extra-content">
+            <div class="grid-container">
+                <div class="grid-item1">
+                    <div class="grid-item" onclick="scrollToAboutMe()">
+                        <h2>關於我</h2>
+                        <p></p>
+                        <img src="gif/azusa.gif" alt="Your GIF">
+                    </div>
+                </div>
+                <div class="grid-item2" onclick="like()">
+                    <div class="item-content">
+                        <h2>興趣愛好</h2>
+                        <p>玩些遊戲,看小說跟動漫,聽歌,反正我就是個宅男:D</p>
+                    </div>
+                </div>
+                <div class="grid-item3" onclick="no()">
+                    <div class="item-content">
+                        <h2>專長</h2>
+                        <p>專長是...什麼</p>
+                        <img src="gif/sadge.gif" alt="Your GIF">
+                    </div>
+                </div>
+                <div class="grid-item4" onclick="ok()">
+                    <div class="item-content">
+                        <h2>聯繫方式</h2>
+                        <p>社交平台基本沒啥在用,很常用discord,有興趣的ID:yuyun_uwu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="about-me-wrapper" class="about-me-wrapper">
+            <div class="about-me-section">
+                <div class="about-me-content">
+                    <h2>關於我</h2>
+                    <p>就讀虎尾科技大學資訊工程科五專部的普通人</p>
+                    <p>就真的沒啥好說的 有興趣的話可以去學校官網看看</p>
+                    <p><a href="https://www.nfu.edu.tw/zh/" target="_blank">點我去虎科大首頁</a></p>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div id="like" class="like">
+                <h1>興趣</h1>
+                <p>有漫展就都會去看,動漫啥的整天泡在裡面</p>
+                <p>平常有事沒事會聽些日文歌跟bgm</p>
+                <p>遊戲的話會玩瓦羅蘭、minecraft、osu之類的,但主要</p>
+                <p2 class="hover-text">永遠支持蔚藍檔案</p2>
+                <del>好啦我就羅莉控</del><img src="gif/jail.gif" class="jail" alt="jail">
+                <div class="tooltip" id="tooltip"><p>蔚藍檔案是一款角色收集RPG遊戲</p><p>以日式動畫風格描繪未來學園都市般的故事舞台</p><p>玩家將作為老師，帶領學生們解決在城市內發生的形形色色的案件</p>
+                <br><p3>反正就是可以開後宮<br>養一堆老婆快點去玩</p3><br><img src="gif/seia.gif" class="seia" alt="seia">
+                </div>
+            </div>
+        </section>     
+        <section>
+            <div id="no" class="no">
+                <h1>專長</h1>
+                <p>我是真的沒什麼專長,只是個普通人D:</p>
+                <p>不過歡迎來找我聊天,我需要陪伴</p>
+                <del>因為我是孤兒</del><br>
+                <img src="gif/rain.gif" alt="rain">
+            </div>
+        </section> 
+        <section>
+            <div id="ok" class="ok">
+                <h1>聯繫方式</h1>
+                <p>我很長在用discord,你24小時都可以看到我在線上或某個頻道裡掛機</p>
+                <p>喔對了,想要無憂無慮的上網,或是納悶沒辦法看特定地區的影片嗎?</p>
+                <p2>別擔心!衝浪鯊魚surfshark vpn來了</p2><img src="images/wow.png" alt="wow">
+                <p>透過 Surfshark 的獨家優惠，購買更多線上保護工具，並免費享受更多月份的網絡安全保障。暢享無人追蹤的上網衝浪，保護您的設備免受惡意軟件的侵害，保護您的帳戶安全，確保個人資料不會流出。</p>
+                <p>現在還有7天的免費試用期和30天的無條件退款,還不趕快來試試嗎?</p>
+                <del>好啦這段單純只是我想不到要寫什麼而已....XD</del>
+            </div>
+        </section>
+    </div>
+    <button id="sound-toggle" onclick="toggleSound()">撥放音樂</button>
+    <audio id="bg-audio" loop autoplay>
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+        您的瀏覽器不支援HTML5音頻
+    </audio>
+    <div id="scroll-to-top" onclick="scrollToTop()">
+        <svg width="30" height="30" viewBox="0 0 24 24">
+            <path fill="white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.59 14.59L12 11.17l-4.59 4.58L6 15l6-6 6 6-1.41 1.41z"/>
+            <path fill="none" d="M0 0h24v24H0z"/>
+        </svg>
+    </div>   
+    
+    <div id="click-effect-container"></div>
+    <div id="mouse-trail"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="javascript/clock.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
